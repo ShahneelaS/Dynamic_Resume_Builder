@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DYNAMIC RESUME BUILDER</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>DYNAMIC RESUME BUILDER</h1>
+    
+    <!-- Form Section -->
+    <div class="form-section">
+      <form id="resume-form">
+        <h2>PERSONAL INFORMATION</h2>
+        <input type="text" id="name" placeholder="Name" oninput="updatePreview()" required>
+        <input type="email" id="email" placeholder="Email" oninput="updatePreview()" required>
+        <input type="tel" id="phone" placeholder="Phone" oninput="updatePreview()" required>
+        <input type="text" id="username" placeholder="Enter your username" required />
+        <input type="file" id="profile-picture" accept="image/*" onchange="updatePicture()" required>
+        
+
+        <h2>EDUCATION</h2>
+        <input type="text" id="degree" placeholder="Degree" oninput="updatePreview()" required>
+        <input type="text" id="institution" placeholder="Institution" oninput="updatePreview()" required>
+        <input type="text" id="year" placeholder="Year" oninput="updatePreview()" required>
+
+        <h2>WORK EXPERIENCE</h2>
+        <input type="text" id="job-title" placeholder="Job Title" oninput="updatePreview()" required>
+        <input type="text" id="company" placeholder="Company" oninput="updatePreview()" required>
+        <input type="text" id="years" placeholder="Years" oninput="updatePreview()" required>
+
+        <h2>SKILLS</h2>
+        <input type="text" id="skills" placeholder="Skills (comma-separated)" oninput="updatePreview()" required>
+        <input type="hidden" id="base64ImageData" />
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="preview-section" id="resume-preview">
+      <h2>Your Resume</h2>
+      <h3 id="personal-info-heading">PERSONAL INFORMATION</h3>
+      <img id="preview-image" src="" alt="Profile Picture" style="display: none;" />
+      <p><strong>Name:</strong> <span id="preview-name" contenteditable="true">Your Name</span></p>
+      <p><strong>Email:</strong> <span id="preview-email" contenteditable="true">Your Email</span></p>
+      <p><strong>Phone:</strong> <span id="preview-phone" contenteditable="true">Your Phone</span></p>
+      
+      <h3>EDUCATION</h3>
+      <p><span id="preview-degree" contenteditable="true">Degree</span> from <span id="preview-institution" contenteditable="true">Institution</span> (<span id="preview-year" contenteditable="true">Year</span>)</p>
+
+      <h3>WORK EXPERIENCE</h3>
+      <p><span id="preview-job-title" contenteditable="true">Job Title</span> at <span id="preview-company" contenteditable="true">Company</span> (<span id="preview-years" contenteditable="true">Years</span>)</p>
+
+      <h3>SKILLS</h3>
+      <p id="preview-skills" contenteditable="true">Skills</p>
+     
+      <!-- Section to Display the Unique URL -->
+<div id="resume-link"></div>
+<!-- Section to Download PDF -->
+<button id="download-pdf" style="display:none;">Download Resume as PDF</button>
+
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>

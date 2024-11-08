@@ -1,0 +1,179 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background and border */
+body {
+  background-color: #eaeef3;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for the entire content */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  
+}
+
+/* Main title (center aligned) */
+.form-section h2, .preview-section h2 {
+  color: #4a90e2;
+  font-size: 1.8em;
+  text-align: center; /* Center alignment */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+.form-section h2 {
+  text-align: left; /* Left-align for form section */
+}
+
+.preview-section h2 {
+  text-align: center; /* Center-align for preview title */
+}
+
+/* Form Section */
+.form-section {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dedede;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="file"],
+.form-section button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="email"]:focus,
+.form-section input[type="tel"]:focus,
+.form-section input[type="file"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Generate Resume Button */
+.form-section button {
+  background-color: #4a90e2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #357ab7;
+}
+
+/* Preview Section */
+.preview-section {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dedede;
+  margin-top: 20px;
+}
+
+.preview-section h3 {
+  color: #4a90e2;
+  font-size: 1.3em;
+  margin-top: 15px;
+  border-bottom: 1px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+.preview-section p {
+  margin: 8px 0;
+  color: #666;
+}
+
+/* Personal Information Section Heading */
+#personal-info-heading {
+  color: #4a90e2;
+  font-size: 1.5em;
+  margin-top: 20px;
+  border-bottom: 1px solid #4a90e2;
+  padding-bottom: 5px;
+  text-align:left;
+}
+
+/* Profile Picture */
+#preview-image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #4a90e2;
+}
+
+/* Unique Link and PDF Download Button */
+#resume-link {
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: center;
+}
+
+#resume-link a {
+  color: #4a90e2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#resume-link a:hover {
+  text-decoration: underline;
+}
+
+#download-pdf {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#download-pdf:hover {
+  background-color: #357ab7;
+}
+
+/* Highlighting editable fields */
+[contenteditable="true"] {
+  padding: 3px;
+  border-radius: 4px;
+  cursor: text;
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid #4a90e2;
+  background-color: #f4f8fb;
+}
